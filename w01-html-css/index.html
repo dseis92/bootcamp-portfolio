@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 1 Landing — HTML/CSS</title>
+  <meta name="description" content="Responsive, accessible landing page built with semantic HTML and modern CSS." />
+  <link rel="preload" href="./assets/logo.svg" as="image" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Home">
+        <img src="./assets/logo.svg" alt="" width="28" height="28" />
+        <span>Bootcamp</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-sm" href="#pricing">Get started</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy">
+        <h1>Learn by building real projects</h1>
+        <p>Ship a clean, responsive site with great accessibility. This is your first deliverable.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#pricing">Start now</a>
+          <a class="btn btn-ghost" href="#features">See features</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-card"></div>
+      </div>
+    </section>
+
+    <section id="features" class="section container">
+      <h2 class="section-title">Features</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Semantic HTML</h3>
+          <p>Use headings, landmarks, and alt text for clarity and accessibility.</p>
+        </article>
+        <article class="card">
+          <h3>Modern layout</h3>
+          <p>Grid for structure, Flexbox for alignment, fluid type for polish.</p>
+        </article>
+        <article class="card">
+          <h3>Performance</h3>
+          <p>Tight CSS, optimized assets, and a simple critical path.</p>
+        </article>
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Mobile first, then scale up to tablet and desktop breakpoints.</p>
+        </article>
+        <article class="card">
+          <h3>Accessible</h3>
+          <p>Keyboard focus, contrast checks, and a skip link.</p>
+        </article>
+        <article class="card">
+          <h3>Deployable</h3>
+          <p>Auto deploy on push with GitHub Actions and Pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section container">
+      <h2 class="section-title">Pricing</h2>
+      <div class="grid pricing">
+        <article class="price-card">
+          <h3>Starter</h3>
+          <p class="price"><span>$</span>0</p>
+          <ul>
+            <li>Landing page</li>
+            <li>Accessibility checks</li>
+            <li>GitHub Pages deploy</li>
+          </ul>
+          <button class="btn w-full">Choose Starter</button>
+        </article>
+        <article class="price-card featured" aria-label="Recommended">
+          <h3>Pro</h3>
+          <p class="price"><span>$</span>9</p>
+          <ul>
+            <li>All Starter features</li>
+            <li>Extra sections</li>
+            <li>Email capture form</li>
+          </ul>
+          <button class="btn w-full">Choose Pro</button>
+        </article>
+        <article class="price-card">
+          <h3>Team</h3>
+          <p class="price"><span>$</span>19</p>
+          <ul>
+            <li>All Pro features</li>
+            <li>Team checklist</li>
+            <li>Priority reviews</li>
+          </ul>
+          <button class="btn w-full">Choose Team</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section container">
+      <h2 class="section-title">FAQ</h2>
+      <details>
+        <summary>How do I run this project locally?</summary>
+        <p>Use the Python server or the Live Server extension. Instructions are in the README.</p>
+      </details>
+      <details>
+        <summary>How do I meet the Lighthouse targets?</summary>
+        <p>Keep CSS small, use semantic HTML, and avoid large unoptimized images.</p>
+      </details>
+      <details>
+        <summary>How do I deploy?</summary>
+        <p>Push to main. The GitHub Pages action publishes the <code>w01-html-css</code> folder.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Bootcamp. All rights reserved.</p>
+      <a href="#" class="footer-link">Back to top</a>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
